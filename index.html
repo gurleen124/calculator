@@ -9,7 +9,7 @@
 
 </head>
 
-<body class="bg-sky-700 max-w-7xl bg-opacity-50">
+<body class="bg-sky-800 max-w-7xl bg-opacity-50">
     <!-- main section -->
     <main class="grid md:grid-cols-3 md:gap-x-36 mt-5 justify-center">
         <div class="col-span-1 flex md:justify-end justify-center mb-10 md:mb-0">
@@ -24,12 +24,14 @@
                 subtraction, multiplication, and division.</p>
         </div>
         <div
-            class="bg-sky-100 rounded-3xl mx-10 md:mx-0 py-5 md:py-0 col-span-1 justify-evenly md:mt-16 mb-10 md:mb-0 shadow-2xl items-center flex-col flex w-fit px-10 md:px-0 md:w-full">
+            class="bg-sky-100 rounded-3xl mx-10 md:mx-0 py-5 md:py-0 col-span-1 md:mt-16 mb-10 justify-evenly md:mb-0 shadow-2xl items-center flex-col flex w-fit px-10 md:px-0 md:w-full">
             <h2 class="font-bold text-sky-800 text-center text-xl">Calculate</h2>
             <table class="grid text-xl md:w-5/6">
                 <tr class="flex">
-                    <td class="w-full bg-white rounded-lg py-2 text-end"><input type="text" name="result" id="result"
-                            disabled class="bg-white"></td>
+                    <td class="w-full rounded-lg py-2 text-end">
+                        <div id="result" class="focus:border-0 resize-none text-right bg-transparent px-3 h-20"></div>
+                        <div id="final" class="bg-transparent text-right px-3 h-10 text-2xl font-medium"></div>
+                        </td>
                 </tr>
                 <tr
                     class="*:border *:rounded-3xl gap-x-4 my-3 *:py-1 text-base *:size-1/4 *:shadow-xl text-center *:bg-sky-900 *:text-sky-50 flex">
@@ -56,7 +58,7 @@
                     class="*:border *:rounded-xl gap-x-4 mb-3 *:py-2 *:size-1/4 text-center *:shadow-xl *:text-sky-50 flex">
                     <td class="bg-blue-400" onclick="display('4')"><input type="button" value="4" /></td>
                     <td class="bg-blue-400" onclick="display('5')"><input type="button" value="5" /></td>
-                    <td class="bg-blue-400" onclick="display('e')"><input type="button" value="6" /></td>
+                    <td class="bg-blue-400" onclick="display('6')"><input type="button" value="6" /></td>
                     <td class="bg-yellow-400" onclick="display('-')"><input type="button" value="-" /></td>
                 </tr>
                 <tr
@@ -71,13 +73,13 @@
                     <td class="bg-blue-400" onclick="display('0')"><input type="button" value="0" /></td>
                     <td class="bg-blue-400" onclick="display('00')"><input type="button" value="00" /></td>
                     <td class="bg-blue-400" onclick="display('.')"><input type="button" value="." /></td>
-                    <td class="bg-green-400" onclick="addition()"><input type="button" value="=" /></td>
+                    <td class="bg-green-400" onclick="calc()"><input type="button" value="=" /></td>
                 </tr>
             </table>
         </div>
     </main>
     <!-- /main section -->
-    <script src="./assets/js/style.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
