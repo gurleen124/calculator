@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body class="bg-sky-700 max-w-7xl bg-opacity-50">
+    <!-- main section -->
+    <main class="grid md:grid-cols-3 md:gap-x-36 mt-5 justify-center">
+        <div class="col-span-1 flex md:justify-end justify-center mb-10 md:mb-0">
+            <h1 class="text-orientation md:text-8xl text-5xl font-bold text-sky-50 text-opacity-50 text-center">
+                Calculator App</h1>
+        </div>
+        <div
+            class="bg-sky-100 rounded-3xl mx-10 md:mx-0 py-5 md:py-0 px-2 col-span-1 flex flex-col mb-16 items-center shadow-2xl justify-center text-center w-fit">
+            <img src="./assets/images/calculator-png.png" alt="calculator" width="200px">
+            <h2 class="font-bold mt-16 text-sky-800 text-xl">Calculate Everything</h2>
+            <p class="mt-3 text-sky-700 px-5">Perform all Calculations like Addition,<br>
+                subtraction, multiplication, and division.</p>
+        </div>
+        <div
+            class="bg-sky-100 rounded-3xl mx-10 md:mx-0 py-5 md:py-0 col-span-1 justify-evenly md:mt-16 mb-10 md:mb-0 shadow-2xl items-center flex-col flex w-fit px-10 md:px-0 md:w-full">
+            <h2 class="font-bold text-sky-800 text-center text-xl">Calculate</h2>
+            <table class="grid text-xl md:w-5/6">
+                <tr class="flex">
+                    <td class="w-full bg-white rounded-lg py-2 text-end"><input type="text" name="result" id="result"
+                            disabled class="bg-white"></td>
+                </tr>
+                <tr
+                    class="*:border *:rounded-3xl gap-x-4 my-3 *:py-1 text-base *:size-1/4 *:shadow-xl text-center *:bg-sky-900 *:text-sky-50 flex">
+                    <td onclick="display('e')"><input type="button" value="e" /></td>
+                    <td onclick="display('%')"><input type="button" value="%" /></td>
+                    <td onclick="display('sin')"><input type="button" value="sin" /></td>
+                    <td onclick="display('deg')"><input type="button" value="deg" /></td>
+                </tr>
+                <tr
+                    class="*:border *:size-1/4 gap-x-4 mb-3 *:py-2 *:rounded-xl text-center *:shadow-xl *:text-sky-50 flex">
+                    <td class="bg-red-400" onclick="clearScreen()"><input type="button" value="C" /></td>
+                    <td class="bg-blue-400" onclick="display('(')"><input type="button" value="(" /></td>
+                    <td class="bg-blue-400" onclick="display(')')"><input type="button" value=")" /></td>
+                    <td class="bg-yellow-400" onclick="display('/')"><input type="button" value="/" /></td>
+                </tr>
+                <tr
+                    class="*:border *:rounded-xl gap-x-4 mb-3 *:py-2 *:size-1/4 text-center *:shadow-xl *:text-sky-50 flex">
+                    <td class="bg-blue-400" onclick="display('7')"><input type="button" value="7" /></td>
+                    <td class="bg-blue-400" onclick="display('8')"><input type="button" value="8" /></td>
+                    <td class="bg-blue-400" onclick="display('9')"><input type="button" value="9" /></td>
+                    <td class="bg-yellow-400" onclick="display('*')"><input type="button" value="x" /></td>
+                </tr>
+                <tr
+                    class="*:border *:rounded-xl gap-x-4 mb-3 *:py-2 *:size-1/4 text-center *:shadow-xl *:text-sky-50 flex">
+                    <td class="bg-blue-400" onclick="display('4')"><input type="button" value="4" /></td>
+                    <td class="bg-blue-400" onclick="display('5')"><input type="button" value="5" /></td>
+                    <td class="bg-blue-400" onclick="display('e')"><input type="button" value="6" /></td>
+                    <td class="bg-yellow-400" onclick="display('-')"><input type="button" value="-" /></td>
+                </tr>
+                <tr
+                    class="*:border *:rounded-xl gap-x-4 mb-3 *:py-2 *:size-1/4 text-center *:shadow-xl *:text-sky-50 flex">
+                    <td class="bg-blue-400" onclick="display('1')"><input type="button" value="1" /></td>
+                    <td class="bg-blue-400" onclick="display('2')"><input type="button" value="2" /></td>
+                    <td class="bg-blue-400" onclick="display('3')"><input type="button" value="3" /></td>
+                    <td class="bg-yellow-400" onclick="display('+')"><input type="button" value="+" /></td>
+                </tr>
+                <tr
+                    class="*:border *:rounded-xl gap-x-4 mb-3 *:py-2 *:size-1/4 text-center *:shadow-xl *:text-sky-50 flex">
+                    <td class="bg-blue-400" onclick="display('0')"><input type="button" value="0" /></td>
+                    <td class="bg-blue-400" onclick="display('00')"><input type="button" value="00" /></td>
+                    <td class="bg-blue-400" onclick="display('.')"><input type="button" value="." /></td>
+                    <td class="bg-green-400" onclick="addition()"><input type="button" value="=" /></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <!-- /main section -->
+    <script src="./assets/js/style.js"></script>
+</body>
+
+</html>
